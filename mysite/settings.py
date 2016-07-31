@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+	'BrokerageTable.apps.BrokeragetableConfig',
     'Landing.apps.LandingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,7 +122,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticOriginals")

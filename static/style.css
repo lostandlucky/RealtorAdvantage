@@ -1,0 +1,165 @@
+/* line 59, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.navbar div {
+  background-color: #465451; }
+
+/* line 64, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.navbar ul li a:hover {
+  background-color: transparent; }
+
+/* line 71, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.navbar a {
+  color: white; }
+
+/* line 74, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.navbar a:hover {
+  color: cornflowerblue;
+  background-color: transparent; }
+
+/* line 88, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.footer div {
+  background-color: #465451;
+  margin-top: 15px; }
+
+/* line 92, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.footer .text_copyright {
+  line-height: 17px;
+  text-align: center;
+  color: white; }
+  /* line 96, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+  .footer .text_copyright a {
+    color: white; }
+
+/* line 111, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.social_icon .fa-facebook:hover {
+  color: #4060A5; }
+
+/* line 114, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.social_icon .fa-twitter:hover {
+  color: #00ABE3; }
+
+/* line 117, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.social_icon .fa-linkedin:hover {
+  color: #0094BC; }
+
+/* line 120, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.social_icon .fa-google-plus:hover {
+  color: #e64522; }
+
+/* line 132, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+div.split_Jumbo {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30%;
+  padding-left: 0px;
+  padding-right: 0px; }
+  /* line 15, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+  div.split_Jumbo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  /* line 135, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+  div.split_Jumbo div.text_overlay_HeadDetail {
+    bottom: 0;
+    position: absolute;
+    color: black; }
+    /* line 33, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+    div.split_Jumbo div.text_overlay_HeadDetail h1 {
+      font-family: "Khula";
+      font-size: 2.9em;
+      line-height: 0.5em;
+      color: white;
+      padding-left: 10px; }
+    /* line 40, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+    div.split_Jumbo div.text_overlay_HeadDetail p {
+      font-size: 1.4em;
+      line-height: 20px;
+      padding-left: 15px;
+      color: white; }
+
+/* line 151, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+h2.previewList_entryHeading {
+  font-family: "Khula";
+  font-size: 2.2em;
+  color: darkslategray; }
+
+/* line 157, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+p.previewList_Detail {
+  font-family: "Khula";
+  font-size: 1.1em;
+  color: black;
+  padding-left: 10px; }
+
+/* line 171, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+h1.colList_Heading {
+  font-family: "Roboto";
+  font-size: 1.8em;
+  color: #eb4c41;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #d2e1de;
+  padding-bottom: 8px; }
+
+/* line 179, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+ol.colList_thumbHeading {
+  display: block;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0px; }
+  /* line 184, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+  ol.colList_thumbHeading div {
+    margin-top: 15px;
+    margin-bottom: 10px; }
+  /* line 189, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+  ol.colList_thumbHeading li span {
+    font-family: "Khula";
+    font-size: 1.3em;
+    color: darkslategray;
+    padding-top: 5px;
+    padding-bottom: 100px; }
+
+/* line 206, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.text_center {
+  text-align: center; }
+
+/* line 210, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.icon-bar {
+  color: white;
+  background-color: white; }
+
+/* line 215, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.float_right {
+  float: right; }
+
+/* line 219, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.margin_noBott {
+  margin-bottom: 0px; }
+
+/* line 223, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.margin_noTop {
+  margin-top: 0px; }
+
+/* line 227, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.margin_noLeft {
+  margin-left: 0px; }
+
+/* line 231, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.margin_noRight {
+  margin-right: 0px; }
+
+/* line 235, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.margin_none {
+  margin: 0px; }
+
+/* line 238, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+.padding_none {
+  padding: 0px; }
+
+/* line 242, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
+div.line_break {
+  height: 5px; }
+
+/*# sourceMappingURL=style.css.map */

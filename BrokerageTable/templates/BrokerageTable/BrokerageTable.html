@@ -1,6 +1,92 @@
-<ul>
-	{% for Brokerage in Brokerage_List %}
-		<li> {{ Brokerage.BrokerageName }} </li>
-		<li> {{ Brokerage.ReviewLink }} </li>
-	{% endfor %}
-</ul>
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+	
+	<tr> 
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.BrokerageName }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.ReviewLink }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.ContactLink }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.TotalAgents }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Location }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Desks }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.YearlyCosts }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.CommisionSplit }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Cap }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.TrainingPerWeek }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Onboarding }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Mentorship }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Teams_Hiring }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.Marketing }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.TotalListings }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.ConferenceRooms }}</td>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for Brokerage in Brokerage_List %}
+			<td>{{ Brokerage.OfficeLeaders }}</td>
+		{% endfor %}
+	</tr>
+</table>
+{% endblock content %}

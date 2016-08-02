@@ -6,6 +6,16 @@
 .navbar ul li a:hover {
   background-color: transparent; }
 
+table{
+    border-style: solid;
+    border-color: black;
+}
+
+td{
+    border-style: solid;
+    border-color: black;
+}
+
 /* line 71, E:/Google Drive/Sherlock Homes/Realtors Union Static Pages Working Folder/Landing Page new Design/style.scss */
 .navbar a {
   color: white; }

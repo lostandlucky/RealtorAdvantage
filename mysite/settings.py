@@ -32,31 +32,31 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-	'BrokerageTable.apps.BrokeragetableConfig',
-	'Landing.apps.LandingConfig',
-	'blog.apps.BlogConfig',
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
+    'BrokerageTable.apps.BrokeragetableConfig',
+    'Landing.apps.LandingConfig',
+    'blog.apps.BlogConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 
-	#Wagtail apps
-	'wagtail.wagtailforms',
-	'wagtail.wagtailredirects',
-	'wagtail.wagtailembeds',
-	'wagtail.wagtailsites',
-	'wagtail.wagtailusers',
-	'wagtail.wagtailsnippets',
-	'wagtail.wagtaildocs',
-	'wagtail.wagtailimages',
-	'wagtail.wagtailsearch',
-	'wagtail.wagtailadmin',
-	'wagtail.wagtailcore',
+    #Wagtail apps
+    'wagtail.wagtailforms',
+    'wagtail.wagtailredirects',
+    'wagtail.wagtailembeds',
+    'wagtail.wagtailsites',
+    'wagtail.wagtailusers',
+    'wagtail.wagtailsnippets',
+    'wagtail.wagtaildocs',
+    'wagtail.wagtailimages',
+    'wagtail.wagtailsearch',
+    'wagtail.wagtailadmin',
+    'wagtail.wagtailcore',
 
-	'modelcluster',
-	'taggit',
+    'modelcluster',
+    'taggit',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -68,10 +68,10 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	
-	#Wagtail Middleware
-	'wagtail.wagtailcore.middleware.SiteMiddleware',
-	'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    
+    #Wagtail Middleware
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -141,23 +141,36 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
-STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-if 'AWS_PATH' in os.environ:
-	DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-	STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-	AWS_ACCESS_KEY_ID = ''
-	AWS_SECRET_ACCESS_KEY = ''
-	AWS_STORAGE_BUCKET_NAME = 'elasticbeanstalk-us-east-1-398759884299'
-
-#os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticOriginals")
 ]
 
-WAGTAIL_SITE_NAME = 'RealtorAdvantage'
+if 'AWS_PATH' in os.environ:
+    
+    AWS_ACCESS_KEY_ID = ''
+    AWS_SECRET_ACCESS_KEY = ''
+    AWS_STORAGE_BUCKET_NAME = 'elasticbeanstalk-us-east-1-398759884299'
+    # This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
+    # We also use it in the next setting.
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
+
+    #Static Files
+    STATICFILES_LOCATION = 'static'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    # This is used by the `static` template tag from `static`, if you're using that. Or if anything else
+    # refers directly to STATIC_URL. So it's safest to always set it.
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+
+    #Media Files
+    MEDIAFILES_LOCATION = 'media'
+    MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
+    #os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
+else
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
+
+WAGTAIL_SITE_NAME = 'RealtorAdvantage'

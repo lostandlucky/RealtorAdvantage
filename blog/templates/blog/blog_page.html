@@ -1,0 +1,76 @@
+{% load staticfiles %}
+{% load wagtailcore_tags %}
+{% load wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sherlock Homes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'Assests/Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Assests/font-awesome-4.6.3/font-awesome-4.6.3/css/font-awesome.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'Assests/Bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Khula:800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet" type="text/css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="jumbotron margin_noBott">
+        <h1 class="text_center"> Jumbo Ad Top!</h1> </div>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <div class="navbar-header"> <a class="navbar-brand" href="#">Sherlock Homes</a> </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Brokerage Tables</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Upcomming Events</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right social_icon">
+                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <h2>
+        Is this red
+    </h2>
+
+
+    <div class="container-fluid">
+        {% block content %} 
+            {{self.body|richtext}}
+        {% endblock content %}
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row footer">
+                <div class="text_copyright">
+                    <p>Copyright &copy; RealtorsUnion Inc. All rights reserved | Design by <a target="_blank" rel="nofollow" href="http://jaredstonethomson.com/">Jared Thomson and Steve Day</a></p>
+                    <p>Trade marks and images used in the design are the copyright of their respective owners and are used for demo purposes only.</p>
+                    <p>I'm sure we'll need more crap here</p>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -18,9 +18,25 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from Landing import views
 
+#wagtail libraries
+from wagtail.wagtailadmin import urls as wagtailadmin_urls
+from wagtail.wagtaildocs import urls as wagtaildocs_urls
+from wagtail.wagtailcore import urls as wagtail_urls
+
+#for media as suggested by wagtail
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
 	url(r'^BrokerageTable/', include('BrokerageTable.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name='index')
-	
-]
+    url(r'^$', views.index, name='index'),
+
+    #wagtail urls
+	url(r'^cms/', include(wagtailadmin_urls)),
+    url(r'^documents/', include(wagtaildocs_urls)),
+    #url(r'^pages/', include(wagtail_urls)),
+	url(r'^pages/', include(wagtail_urls)),
+
+	#for media as suggested by wagtail
+] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

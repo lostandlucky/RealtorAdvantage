@@ -30,30 +30,34 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-if 'AWS_PATH' in os.environ:
-	INSTALLED_APPS = [
-		'BrokerageTable.apps.BrokeragetableConfig',
-		'Landing.apps.LandingConfig',
-		'django.contrib.admin',
-		'django.contrib.auth',
-		'django.contrib.contenttypes',
-		'django.contrib.sessions',
-		'django.contrib.messages',
-		'django.contrib.staticfiles',
-		'storages',
-	]
 
-else:
-	INSTALLED_APPS = [
-		'BrokerageTable.apps.BrokeragetableConfig',
-		'Landing.apps.LandingConfig',
-		'django.contrib.admin',
-		'django.contrib.auth',
-		'django.contrib.contenttypes',
-		'django.contrib.sessions',
-		'django.contrib.messages',
-		'django.contrib.staticfiles',
-	]
+INSTALLED_APPS = [
+	'BrokerageTable.apps.BrokeragetableConfig',
+	'Landing.apps.LandingConfig',
+	'blog.apps.BlogConfig',
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+
+	#Wagtail apps
+	'wagtail.wagtailforms',
+	'wagtail.wagtailredirects',
+	'wagtail.wagtailembeds',
+	'wagtail.wagtailsites',
+	'wagtail.wagtailusers',
+	'wagtail.wagtailsnippets',
+	'wagtail.wagtaildocs',
+	'wagtail.wagtailimages',
+	'wagtail.wagtailsearch',
+	'wagtail.wagtailadmin',
+	'wagtail.wagtailcore',
+
+	'modelcluster',
+	'taggit',
+]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +68,10 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	
+	#Wagtail Middleware
+	'wagtail.wagtailcore.middleware.SiteMiddleware',
+	'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -141,8 +149,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 if 'AWS_PATH' in os.environ:
 	DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 	STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-	AWS_ACCESS_KEY_ID = 'AKIAI77JZDOLMZHQAKXQ'
-	AWS_SECRET_ACCESS_KEY = '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'
+	AWS_ACCESS_KEY_ID = ''
+	AWS_SECRET_ACCESS_KEY = ''
 	AWS_STORAGE_BUCKET_NAME = 'elasticbeanstalk-us-east-1-398759884299'
 
 #os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
@@ -150,4 +158,6 @@ if 'AWS_PATH' in os.environ:
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticOriginals")
 ]
+
+WAGTAIL_SITE_NAME = 'RealtorAdvantage'
 
